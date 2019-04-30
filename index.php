@@ -1,7 +1,7 @@
 <!doctype html>
 <?php
-static $author="Yoodi";
-static $version="1.0"
+static $author = "Yoodi";
+static $version = "1.0"
 ?>
 <!--
 	Author:<?php echo $author."\n"?>
@@ -9,34 +9,27 @@ static $version="1.0"
 -->
 <html>
 <head>
-<meta charset="utf-8">
-<title>注册</title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>注册</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-<div>
-  <form action="reg.php" method="post">
-    <table width="250" border="0" align="center" cellpadding="2" cellspacing="2">
-      <tbody>
-        <tr>
-          <th width="250" height="30" align="center" valign="middle" style="color: #000000; font-size: 36px;">注册</th>
-        </tr>
-        <tr>
-          <td height="40" align="center" valign="middle"><input name="username" type="text" class="text" id="userName" placeholder="用户名"></td>
-        </tr>
-        <tr>
-          <td height="40" align="center" valign="middle"><input name="password" type="text" class="text" id="userPassword" placeholder="密码"></td>
-        </tr>
-        <tr>
-          <td height="40" align="center" valign="middle"><input name="email" type="text" class="text" id="userPassword2" placeholder="邮箱"></td>
-        </tr>
-        <tr>
-          <td align="center" valign="middle"><input name="button" type="submit" class="button" id="button2" value="提交"></td>
-        </tr>
-      </tbody>
-    </table>
-  </form>
-</div>
+	<div>
+		<div align="center">
+			<form action="reg.php" method="post">
+				<h1 style="font-size: 36px">注册</h1>
+				<p><input name="username" type="text" class="text" id="userName" placeholder="用户名">
+				</p>
+				<p><input name="password" type="text" class="text" id="userPassword" placeholder="密码">
+				</p>
+				<p><input name="email" type="text" class="text" id="userPassword2" placeholder="邮箱">
+				</p>
+				<p><input name="button" type="submit" class="button" id="button2" value="提交">
+				</p>
+			</form>
+		</div>
+	</div>
 </body>
 </html>
