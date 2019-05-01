@@ -14,6 +14,7 @@ function generateRandomString( $length = 10 ) {
 <?php
 include( '../conn.php' );
 $username = $_POST[ "username" ];
+$username = str_replace(" ","",$username);
 $email = $_POST[ "email" ];
 $salt = generateRandomString( 16 );
 $regdate = time();

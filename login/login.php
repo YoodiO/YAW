@@ -1,5 +1,6 @@
 <?php
 $username = $_POST[ "username" ];
+$username = str_replace(" ","",$username);
 $password = $_POST[ "password" ];
 include( '../conn.php' );
 
