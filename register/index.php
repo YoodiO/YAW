@@ -28,6 +28,8 @@ static $version = "1.1"
 				</p>
 				<p><input name="button" type="submit" class="button" id="button2" value="提交">
 				</p>
+				<p><a href="../login/">前往登录</a>
+				</p>
 			</form>
 		</div>
 	</div>
