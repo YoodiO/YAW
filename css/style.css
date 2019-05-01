@@ -17,11 +17,7 @@ body {
     border: 1px solid #ccc;
 }
 * {
-    font-family: Consolas, "沐瑶软笔手写体";
-}
-@font-face {
-    font-family: "沐瑶软笔手写体";
-    src: url("../font/沐瑶软笔手写体.ttf");
+    font-family: Consolas,"等线";
 }
 input {
     border: 1px solid #ccc;
