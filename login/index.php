@@ -1,4 +1,8 @@
 <!doctype html>
+<!--
+	Author:<?php echo $author."\n"?>
+	Version:<?php echo $version."\n"?>
+-->
 <html>
 <head>
 	<meta charset="utf-8">
