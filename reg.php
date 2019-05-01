@@ -1,43 +1,35 @@
-<meta charset="utf-8">
+<!doctype html>
 <?php
-function generateRandomString( $length = 10 ) {
-	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-	$randomString = '';
-	for ( $i = 0; $i < $length; $i++ ) {
-		$randomString .= $characters[ rand( 0, strlen( $characters ) - 1 ) ];
-	}
-	return $randomString;
-}
+static $author = "Yoodi";
+static $version = "1.0"
 ?>
+<!--
+	Author:<?php echo $author."\n"?>
+	Version:<?php echo $version."\n"?>
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>注册</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-<?php
-include( 'conn.php' );
-$username = $_POST[ "username" ];
-$email = $_POST[ "email" ];
-$salt = generateRandomString( 16 );
-$regdate = time();
-$regip = $_SERVER[ 'REMOTE_ADDR' ];
-$password = '$SHA$' . $salt . '$' . hash( "SHA256", hash( "SHA256", $_POST[ "password" ] ) . "$salt" );
-$result = $conn->query( "SELECT * FROM authme WHERE username='$username'" );
-if ( $_POST[ "username" ] == ""
-	or $_POST[ "password" ] == ""
-	or $_POST[ "email" ] == "" ) {
-	?>
-<script language="javascript">
-	alert( "用户名、密码或邮箱不能为空！" )
-	window.location.href = "index.php"
-</script>
-<?php
-} else {
-	if ( $result->num_rows > 0 ) {
-		?>
-		<script language="javascript">
-			alert( "该用户已存在！" )
-			window.location.href = "index.php"
-		</script>
-		<?php }else{if($conn->query("INSERT INTO authme(username,password,regdate,email) VALUES('$username','$password','$regdate','$email')")===True){?>
-		<script language="javascript">
-			alert( "注册成功！" )
-			window.location.href = "index.php"
-		</script>
-		<?php $conn->close();}}}?>
+<body>
+	<div>
+		<div align="center">
+			<form action="regprocess.php" method="post">
+				<h1 style="font-size: 36px">注册</h1>
+				<p><input name="username" type="text" class="text" id="userName" placeholder="用户名">
+				</p>
+				<p><input name="password" type="text" class="text" id="userPassword" placeholder="密码">
+				</p>
+				<p><input name="email" type="text" class="text" id="userPassword2" placeholder="邮箱">
+				</p>
+				<p><input name="button" type="submit" class="button" id="button2" value="提交">
+				</p>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
