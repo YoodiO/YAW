@@ -17,11 +17,11 @@
 		<div align="center">
 			<form action="login.php" method="post">
 				<h1 style="font-size: 36px;">登录</h1>
-				<p><input name="username" type="text" class="text" id="userName" placeholder="用户名">
+				<p><input name="username" type="text" class="text" placeholder="用户名" required>
 				</p>
-				<p><input name="password" type="text" class="password" id="userPassword" placeholder="密码">
+				<p><input name="password" type="password" class="text" placeholder="密码" required>
 				</p>
-				<p><input name="button" type="submit" class="button" id="button2" value="提交">
+				<p><input name="button" type="submit" class="button" id="button2" value="提交" required>
 				</p>
 				<p><a href="../register/">前往注册</a>
 				</p>
