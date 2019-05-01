@@ -1,7 +1,7 @@
 <!doctype html>
 <?php
 static $author = "Yoodi";
-static $version = "1.0"
+static $version = "1.1"
 ?>
 <!--
 	Author:<?php echo $author."\n"?>

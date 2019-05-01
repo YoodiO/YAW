@@ -19,9 +19,9 @@ $regdate = time();
 $regip = $_SERVER[ 'REMOTE_ADDR' ];
 $password = '$SHA$' . $salt . '$' . hash( "SHA256", hash( "SHA256", $_POST[ "password" ] ) . "$salt" );
 $result = $conn->query( "SELECT * FROM authme WHERE username='$username'" );
-if ( $_POST[ "username" ] == ""
+if ( $username == ""
 	or $_POST[ "password" ] == ""
-	or $_POST[ "email" ] == "" ) {
+	or $email == "" ) {
 	?>
 <script language="javascript">
 	alert( "用户名、密码或邮箱不能为空！" )
