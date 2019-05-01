@@ -19,7 +19,7 @@
 				<h1 style="font-size: 36px;">登录</h1>
 				<p><input name="username" type="text" class="text" id="userName" placeholder="用户名">
 				</p>
-				<p><input name="password" type="text" class="text" id="userPassword" placeholder="密码">
+				<p><input name="password" type="text" class="password" id="userPassword" placeholder="密码">
 				</p>
 				<p><input name="button" type="submit" class="button" id="button2" value="提交">
 				</p>

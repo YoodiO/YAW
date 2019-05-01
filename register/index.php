@@ -16,13 +16,13 @@
 		<div align="center">
 			<form action="register.php" method="post">
 				<h1 style="font-size: 36px">注册</h1>
-				<p><input name="username" type="text" class="text" id="userName" placeholder="用户名">
+				<p><input name="username" type="text" class="text" id="userName" placeholder="用户名" required>
 				</p>
-				<p><input name="password" type="text" class="text" id="userPassword" placeholder="密码">
+				<p><input name="password" type="password" class="text" id="userPassword" placeholder="密码" required>
 				</p>
-				<p><input name="email" type="text" class="text" id="userPassword2" placeholder="邮箱">
+				<p><input name="email" type="email" class="text" id="email" placeholder="邮箱" required>
 				</p>
-				<p><input name="button" type="submit" class="button" id="button2" value="提交">
+				<p><input name="button" type="submit" class="button" id="email" value="提交">
 				</p>
 				<p><a href="../login/">前往登录</a>
 				</p>
