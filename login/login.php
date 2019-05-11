@@ -1,8 +1,8 @@
 <?php
-$username = $_POST[ "username" ];
-$username = str_replace(" ","",$username);
-$password = $_POST[ "password" ];
+include('../safe.php');
 include( '../conn.php' );
+$username = sqlCheck($_POST[ "username" ]);
+$password = sqlCheck($_POST[ "password" ]);
 
 if ( $username == ""
     or $password == "" ) {

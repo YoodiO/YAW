@@ -1,5 +1,7 @@
 <meta charset="utf-8">
 <?php
+include('../safe.php');
+include( '../conn.php' );
 
 function generateRandomString( $length = 10 ) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -12,9 +14,7 @@ function generateRandomString( $length = 10 ) {
 ?>
 
 <?php
-include( '../conn.php' );
-$username = $_POST[ "username" ];
-$username = str_replace(" ","",$username);
+$username = sqlCheck($_POST[ "username" ]);
 $email = $_POST[ "email" ];
 $salt = generateRandomString( 16 );
 $regdate = time();
